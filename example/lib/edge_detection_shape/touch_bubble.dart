@@ -3,11 +3,12 @@ import 'package:flutter/material.dart';
 import 'animated_touch_bubble_part.dart';
 
 class TouchBubble extends StatefulWidget {
-  TouchBubble({
+  const TouchBubble({
+    Key? key,
     required this.size,
     required this.onDrag,
     required this.onDragFinished,
-  });
+  }) : super(key: key);
 
   final double size;
   final Function onDrag;
@@ -23,31 +24,29 @@ class _TouchBubbleState extends State<TouchBubble> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      behavior: HitTestBehavior.opaque,
-      onPanStart: _startDragging,
-      onPanUpdate: _drag,
-      onPanCancel: _cancelDragging,
-      onPanEnd: (_) => _cancelDragging(),
-      child: Container(
-        width: widget.size,
-        height: widget.size,
-        decoration: BoxDecoration(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.circular(widget.size / 2)
-        ),
-        child: AnimatedTouchBubblePart(
-          dragging: dragging,
-          size: widget.size,
-        )
-      )
-    );
+        behavior: HitTestBehavior.opaque,
+        onPanStart: _startDragging,
+        onPanUpdate: _drag,
+        onPanCancel: _cancelDragging,
+        onPanEnd: (_) => _cancelDragging(),
+        child: Container(
+            width: widget.size,
+            height: widget.size,
+            decoration: BoxDecoration(
+                color: Colors.transparent,
+                borderRadius: BorderRadius.circular(widget.size / 2)),
+            child: AnimatedTouchBubblePart(
+              dragging: dragging,
+              size: widget.size,
+            )));
   }
 
   void _startDragging(DragStartDetails data) {
     setState(() {
       dragging = true;
     });
-    widget.onDrag(data.localPosition - Offset(widget.size / 2, widget.size / 2));
+    widget
+        .onDrag(data.localPosition - Offset(widget.size / 2, widget.size / 2));
   }
 
   void _cancelDragging() {

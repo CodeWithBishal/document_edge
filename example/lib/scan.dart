@@ -13,6 +13,8 @@ import 'camera_view.dart';
 import 'image_view.dart';
 
 class Scan extends StatefulWidget {
+  const Scan({Key? key}) : super(key: key);
+
   @override
   _ScanState createState() => _ScanState();
 }
@@ -50,12 +52,9 @@ class _ScanState extends State<Scan> {
     }
 
     if (imagePath == null && edgeDetectionResult == null) {
-
       return controller == null
-        ? Container()
-        : CameraView(
-            controller: controller!
-      );
+          ? Container()
+          : CameraView(controller: controller!);
     }
 
     return ImagePreview(
@@ -70,16 +69,13 @@ class _ScanState extends State<Scan> {
 
   void _initializeController() {
     checkForCameras();
-    if (cameras!.length == 0) {
+    if (cameras!.isEmpty) {
       log('No cameras detected');
       return;
     }
 
-    controller = CameraController(
-        cameras![0],
-        ResolutionPreset.veryHigh,
-        enableAudio: false
-    );
+    controller = CameraController(cameras![0], ResolutionPreset.veryHigh,
+        enableAudio: false);
     controller!.initialize().then((_) {
       if (!mounted) {
         return;
@@ -99,12 +95,10 @@ class _ScanState extends State<Scan> {
       return Align(
         alignment: Alignment.bottomCenter,
         child: FloatingActionButton(
-          child: Icon(Icons.check),
+          child: const Icon(Icons.check),
           onPressed: () async {
             if (croppedImagePath == null) {
-              return await _processImage(
-                imagePath!, edgeDetectionResult!
-              );
+              return await _processImage(imagePath!, edgeDetectionResult!);
             }
 
             setState(() {
@@ -117,22 +111,19 @@ class _ScanState extends State<Scan> {
       );
     }
 
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: [
-        FloatingActionButton(
-          foregroundColor: Colors.white,
-          child: Icon(Icons.camera_alt),
-          onPressed: onTakePictureButtonPressed,
-        ),
-        SizedBox(width: 16),
-        FloatingActionButton(
-          foregroundColor: Colors.white,
-          child: Icon(Icons.image),
-          onPressed: _onGalleryButtonPressed,
-        ),
-      ]
-    );
+    return Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+      FloatingActionButton(
+        foregroundColor: Colors.white,
+        child: const Icon(Icons.camera_alt),
+        onPressed: onTakePictureButtonPressed,
+      ),
+      const SizedBox(width: 16),
+      FloatingActionButton(
+        foregroundColor: Colors.white,
+        child: const Icon(Icons.image),
+        onPressed: _onGalleryButtonPressed,
+      ),
+    ]);
   }
 
   String timestamp() => DateTime.now().millisecondsSinceEpoch.toString();
@@ -164,7 +155,7 @@ class _ScanState extends State<Scan> {
   }
 
   Future _detectEdges(String filePath) async {
-    if (!mounted || filePath == null) {
+    if (!mounted) {
       return;
     }
 
@@ -179,21 +170,23 @@ class _ScanState extends State<Scan> {
     });
   }
 
-  Future _processImage(String filePath, EdgeDetectionResult edgeDetectionResult) async {
-    if (!mounted || filePath == null) {
+  Future _processImage(
+      String filePath, EdgeDetectionResult edgeDetectionResult) async {
+    if (!mounted) {
       return;
     }
 
-    double rotation=0;
-    bool result = await EdgeDetector().processImage(filePath, edgeDetectionResult,rotation);
+    double rotation = 0;
+    bool result = await EdgeDetector()
+        .processImage(filePath, edgeDetectionResult, rotation);
 
     if (result == false) {
       return;
     }
 
     setState(() {
-      imageCache!.clearLiveImages();
-      imageCache!.clear();
+      imageCache.clearLiveImages();
+      imageCache.clear();
       croppedImagePath = imagePath;
     });
   }
@@ -203,7 +196,7 @@ class _ScanState extends State<Scan> {
 
     log('Picture saved to $filePath');
 
-    if(filePath.isNotEmpty) {
+    if (filePath.isNotEmpty) {
       await _detectEdges(filePath);
     }
   }
@@ -220,11 +213,8 @@ class _ScanState extends State<Scan> {
 
   Padding _getBottomBar() {
     return Padding(
-      padding: EdgeInsets.only(bottom: 32),
-      child: Align(
-        alignment: Alignment.bottomCenter,
-        child: _getButtonRow()
-      )
-    );
+        padding: const EdgeInsets.only(bottom: 32),
+        child:
+            Align(alignment: Alignment.bottomCenter, child: _getButtonRow()));
   }
 }

@@ -73,10 +73,12 @@ import 'package:flutter/material.dart';
 import 'scan.dart';
 
 void main() {
-  runApp(EdgeDetectionApp());
+  runApp(const EdgeDetectionApp());
 }
 
 class EdgeDetectionApp extends StatelessWidget {
+  const EdgeDetectionApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -84,7 +86,7 @@ class EdgeDetectionApp extends StatelessWidget {
       theme: ThemeData(
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
-      home: Scan(),
+      home: const Scan(),
     );
   }
 }

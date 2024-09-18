@@ -2,9 +2,7 @@ import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 
 class CameraView extends StatelessWidget {
-  CameraView({
-    this.controller
-  });
+  const CameraView({Key? key, this.controller}) : super(key: key);
 
   final CameraController? controller;
 
@@ -12,17 +10,15 @@ class CameraView extends StatelessWidget {
   Widget build(BuildContext context) {
     return _getCameraPreview();
   }
-  
+
   Widget _getCameraPreview() {
     if (controller == null || !controller!.value.isInitialized) {
       return Container();
     }
 
     return Center(
-      child: AspectRatio(
-        aspectRatio: controller!.value.aspectRatio,
-        child: CameraPreview(controller!)
-      )
-    );
+        child: AspectRatio(
+            aspectRatio: controller!.value.aspectRatio,
+            child: CameraPreview(controller!)));
   }
 }
