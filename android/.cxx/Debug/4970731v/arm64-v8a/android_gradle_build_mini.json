@@ -1,0 +1,29 @@
+{
+  "buildFiles": [
+    "/Users/bishaldas/GIT_Projects/document_edge/android/CMakeLists.txt"
+  ],
+  "cleanCommandsComponents": [
+    [
+      "/Users/bishaldas/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+      "-C",
+      "/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/arm64-v8a",
+      "clean"
+    ]
+  ],
+  "buildTargetsCommandComponents": [
+    "/Users/bishaldas/Library/Android/sdk/cmake/3.22.1/bin/ninja",
+    "-C",
+    "/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/arm64-v8a",
+    "{LIST_OF_TARGETS_TO_BUILD}"
+  ],
+  "libraries": {
+    "native_edge_detection::@6890427a1f51a3e7e1df": {
+      "artifactName": "native_edge_detection",
+      "abi": "arm64-v8a",
+      "output": "/Users/bishaldas/GIT_Projects/aa/build/document_edge/intermediates/cxx/Debug/4970731v/obj/arm64-v8a/libnative_edge_detection.so",
+      "runtimeFiles": [
+        "/Users/bishaldas/GIT_Projects/document_edge/android/src/main/jniLibs/arm64-v8a/libopencv_java4.so"
+      ]
+    }
+  }
+}

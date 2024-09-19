@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/x86",
+  "command": "/Users/bishaldas/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android21 --sysroot=/Users/bishaldas/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_edge_detection_EXPORTS -I/Users/bishaldas/GIT_Projects/document_edge/android/include -I/Users/bishaldas/GIT_Projects/document_edge/android/../ios/Classes/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -frtti -fexceptions -std=c++11 -fno-limit-debug-info  -fPIC -o CMakeFiles/native_edge_detection.dir/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/native_edge_detection.cpp.o -c /Users/bishaldas/GIT_Projects/document_edge/ios/Classes/native_edge_detection.cpp",
+  "file": "/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/native_edge_detection.cpp"
+},
+{
+  "directory": "/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/x86",
+  "command": "/Users/bishaldas/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android21 --sysroot=/Users/bishaldas/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_edge_detection_EXPORTS -I/Users/bishaldas/GIT_Projects/document_edge/android/include -I/Users/bishaldas/GIT_Projects/document_edge/android/../ios/Classes/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -frtti -fexceptions -std=c++11 -fno-limit-debug-info  -fPIC -o CMakeFiles/native_edge_detection.dir/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/edge_detector.cpp.o -c /Users/bishaldas/GIT_Projects/document_edge/ios/Classes/edge_detector.cpp",
+  "file": "/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/edge_detector.cpp"
+},
+{
+  "directory": "/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/x86",
+  "command": "/Users/bishaldas/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/bin/clang++ --target=i686-none-linux-android21 --sysroot=/Users/bishaldas/Library/Android/sdk/ndk/25.1.8937393/toolchains/llvm/prebuilt/darwin-x86_64/sysroot -Dnative_edge_detection_EXPORTS -I/Users/bishaldas/GIT_Projects/document_edge/android/include -I/Users/bishaldas/GIT_Projects/document_edge/android/../ios/Classes/include -g -DANDROID -fdata-sections -ffunction-sections -funwind-tables -fstack-protector-strong -no-canonical-prefixes -mstackrealign -D_FORTIFY_SOURCE=2 -Wformat -Werror=format-security  -frtti -fexceptions -std=c++11 -fno-limit-debug-info  -fPIC -o CMakeFiles/native_edge_detection.dir/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/image_processor.cpp.o -c /Users/bishaldas/GIT_Projects/document_edge/ios/Classes/image_processor.cpp",
+  "file": "/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/image_processor.cpp"
+}
+]

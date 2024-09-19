@@ -1,0 +1,3 @@
+/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/x86/CMakeFiles/native_edge_detection.dir
+/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/x86/CMakeFiles/edit_cache.dir
+/Users/bishaldas/GIT_Projects/document_edge/android/.cxx/Debug/4970731v/x86/CMakeFiles/rebuild_cache.dir

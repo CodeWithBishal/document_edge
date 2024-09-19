@@ -1,0 +1,5 @@
+# ninja log v5
+0	2347	1726748352	CMakeFiles/native_edge_detection.dir/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/native_edge_detection.cpp.o	a0ad9f11442193ef
+3	2358	1726748352	CMakeFiles/native_edge_detection.dir/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/image_processor.cpp.o	43ba7cfb0f3805ff
+1	2419	1726748352	CMakeFiles/native_edge_detection.dir/Users/bishaldas/GIT_Projects/document_edge/ios/Classes/edge_detector.cpp.o	c167a1cc3398bcfd
+2419	2636	1726748352	/Users/bishaldas/GIT_Projects/compu-rf/compurf/build/document_edge/intermediates/cxx/Debug/11s3e2m1/obj/arm64-v8a/libnative_edge_detection.so	bc47087ce1d09044
